@@ -7,6 +7,25 @@ Simply crop the face from the image at high speed and save.
 #   retinaface_resnet50_with_postprocess_Nx3x96x96_max001_th015.onnx
 # ONNX is automatically downloaded the first time it is run.
 
+# Without USBCam
+xhost +local: && \
+docker run --rm -it --gpus all \
+-v `pwd`:/workdir \
+-e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+-e DISPLAY=$DISPLAY \
+-v /tmp/.X11-unix/:/tmp/.X11-unix:rw \
+pinto0309/botsort_onnx_tensorrt:latest
+
+# With USBCam
+xhost +local: && \
+docker run --rm -it --gpus all \
+-v `pwd`:/workdir \
+-e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+-e DISPLAY=$DISPLAY \
+-v /tmp/.X11-unix/:/tmp/.X11-unix:rw \
+--device /dev/video0:/dev/video0:mwr \
+pinto0309/botsort_onnx_tensorrt:latest
+
 python demo_face_crop_onnx_tflite.py
 ```
 
