@@ -882,7 +882,7 @@ def main():
         '-fdm',
         '--face_detection_model',
         type=str,
-        default='retinaface_mbn025_with_postprocess_Nx3x192x192_max001_th0.15.onnx',
+        default='retinaface_resnet50_with_postprocess_Nx3x96x96_max001_th015.onnx',
         choices=[
             'retinaface_mbn025_with_postprocess_Nx3x64x64_max001_th0.15.onnx',
             'retinaface_mbn025_with_postprocess_Nx3x96x96_max001_th0.15.onnx',
@@ -891,6 +891,13 @@ def main():
             'retinaface_mbn025_with_postprocess_Nx3x192x192_max001_th0.15.onnx',
             'retinaface_mbn025_with_postprocess_Nx3x224x224_max001_th0.15.onnx',
             'retinaface_mbn025_with_postprocess_Nx3x256x256_max001_th0.15.onnx',
+            'retinaface_resnet50_with_postprocess_Nx3x64x64_max001_th015.onnx',
+            'retinaface_resnet50_with_postprocess_Nx3x96x96_max001_th015.onnx',
+            'retinaface_resnet50_with_postprocess_Nx3x128x128_max001_th015.onnx',
+            'retinaface_resnet50_with_postprocess_Nx3x160x160_max001_th015.onnx',
+            'retinaface_resnet50_with_postprocess_Nx3x192x192_max001_th015.onnx',
+            'retinaface_resnet50_with_postprocess_Nx3x224x224_max001_th015.onnx',
+            'retinaface_resnet50_with_postprocess_Nx3x256x256_max001_th015.onnx',
         ],
         help='ONNX/TFLite file path for RetinaFace.',
     )
