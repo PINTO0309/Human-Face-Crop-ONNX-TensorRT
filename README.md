@@ -5,6 +5,7 @@ Simply crop the face from the image at high speed and save.
 # Default:
 #   yolox_x_body_head_hand_0102_0.5533_post_1x3x480x640.onnx
 #   retinaface_resnet50_with_postprocess_Nx3x96x96_max001_th015.onnx
+# ONNX is automatically downloaded the first time it is run.
 
 python demo_face_crop_onnx_tflite.py
 ```
